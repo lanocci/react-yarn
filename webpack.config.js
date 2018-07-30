@@ -1,9 +1,9 @@
 const webpack = require('webpack');
 const path = require('path');
 
-var glob = require('glob')
 const config = {
-  entry: glob.sync('./src/*.js'),
+  entry: './src/todo/index.js',
+  //entry: './src/reddit/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'app.js'

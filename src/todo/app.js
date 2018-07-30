@@ -1,8 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import Todo from './todo'
+import Todo from './todo.js';
 
-class App extends React.Component {
+export default class App extends React.Component {
   constructor(){
     super()
     this.state = {
@@ -34,7 +33,9 @@ class App extends React.Component {
   componentDidMount() {
     let id = setInterval(this.tick, 1000)
     this.setState({intervalId: id})
-
+  }
+  componentWillUnmount(){
+    clearInterval(this.state.intervalId)
   }
   render() {
     return (
@@ -50,7 +51,3 @@ class App extends React.Component {
     ) 
   } 
 } 
-ReactDOM. render(
-  < App />, 
-  document.getElementById("app")
-)
