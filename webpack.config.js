@@ -2,8 +2,8 @@ const webpack = require('webpack');
 const path = require('path');
 
 const config = {
-  entry: './src/todo/index.js',
-  //entry: './src/reddit/index.js',
+  //entry: './src/todo/index.js',
+  entry: './src/reddit/app.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'app.js'

@@ -1,4 +1,6 @@
 import React from 'react';
+import Button from '@material-ui/core/Button';
+import Input from '@material-ui/core/Input';
 import Todo from './todo.js';
 
 export default class App extends React.Component {
@@ -43,8 +45,8 @@ export default class App extends React.Component {
         <p>現在の時間</p>
         <span>{this.state.time.toLocaleTimeString()}</span>
         <h1>新しい タスク </h1>
-        <input type="text" onChange ={ e => this.setState({ input: e.target.value})} value ={this.state.input}/>
-        <button onClick ={this.addToDo}>追加</button>
+        <Input type="text" onChange ={ e => this.setState({ input: e.target.value})} value ={this.state.input}/>
+        <Button onClick ={this.addToDo} variant='contained' color='primary'>追加</Button>
         <h2>ToDo:</h2>
         <Todo todos={this.state.todos} removeTodo={this.removeTodo} />
       </div> 
